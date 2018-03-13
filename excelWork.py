@@ -4,18 +4,18 @@ import random
 from datetime import datetime
 def main():
     wb = xlwt.Workbook()
-    ws = wb.add_sheet("Test")
-    group_list = ['Bi-2', "AC/DC", "deadmau5", "Nogu svelo"]
+    ws = wb.add_sheet("Sheet 1")
+    group_list = ['Bi-2', "AC/DC", "deadmau5", "Nogu svelo", "Nickelback", "Rammstein", "Evan Blum", "Buzova", "Leningrad", "Basta", "Marun", "Years & Years", "Loboda"]
     group_count = len(group_list)
-    album_names = ["name1", "name2", "name3"]
+    album_names = ["Ona ne bointsa", "Roskstar", "despasito", "MInimal", "Woyaj", "La-la", "girl", "boy", "Nossa", "Tall", "Abada", "Kedavra", "Strong", "Car", "Horizont", "Herz", "Azat"]
     album_count = len(album_names)
 
-    genre_list = ["rock", "pop", "electro", "rap"]
+    genre_list = ["rock", "pop", "electro", "rap", "bluz", "jazz"]
     genre_count = len(genre_list)
 
-    lang_list = ["ru", "en"]
+    lang_list = ["ru", "en", "tt"]
     lang_count = len(lang_list)
-    for i in range(10000):
+    for i in range(1000):
         #0
         group = group_list[random.randint(0,group_count-1 )]
         #1
@@ -54,7 +54,7 @@ def main():
         ws.write(i + 1, 6, genre)
         ws.write(i + 1, 7, duration)
         ws.write(i + 1, 8, size)
-        ws.write(i + 1, 9, lang)
+        #ws.write(i + 1, 9, lang)
         ws.write(i + 1, 10, rightholder)
         ws.write(i + 1, 11, torrent_reliz_time)
         ws.write(i + 1, 12, song_count)
